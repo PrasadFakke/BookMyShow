@@ -1,97 +1,105 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Movie Booking App</title>
-  <link rel="stylesheet" href="styles.css" />
-</head>
-<body>
-
-<!-- LOGIN PAGE -->
-<div id="loginPage" class="page active">
-  <div class="auth-box">
-    <h1 class="h1sp">🎬 Movie Booking Login</h1>
-    <form id="loginForm">
-      <div class="form-group">
-        <label for="email">Email</label>
-        <input type="email" id="email" placeholder="you@example.com" required>
-      </div>
-      <div class="form-group">
-        <label for="password">Password</label>
-        <input type="password" id="password" placeholder="Enter password" required>
-      </div>
-      <button type="submit" class="btn primary">Login</button>
-    </form>
-    <p id="loginError" class="error"></p>
-  </div>
-</div>
-
-<!-- DASHBOARD PAGE -->
-<div id="dashboardPage" class="page hidden">
-  <div class="dashboard">
-    <header class="dashboard-header">
-      <div class="sample2">🎟️ BookMyShow</div>
-     <div class="sample"> <button id="logoutBtn" class="btn danger">Logout</button></div>
-    </header>
-
-    <main>
-      <section>
-        <h2>All Movies</h2>
-        <ul id="moviesList" class="list"></ul>
-      </section>
-
-      <section>
-        <h2>My Bookings</h2>
-        <ul id="myBookings" class="list"></ul>
-      </section>
-
-      <section>
-        <h2>Available Shows</h2>
-        <ul id="schedulesList" class="list"></ul>
-      </section>
-
-      <section>
-        <h2>Book a Ticket</h2>
-        <form id="bookForm" class="form">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Movie Booking App</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- LOGIN PAGE -->
+    <div id="loginPage" class="page active">
+      <div class="auth-box">
+        <h1 class="h1sp">🎬 Movie Booking Login</h1>
+        <form id="loginForm">
           <div class="form-group">
-            <label for="scheduleId">Schedule ID</label>
-            <input type="number" id="scheduleId" placeholder="e.g. 1001" required>
+            <label for="email">Email</label>
+            <input
+              type="email"
+              id="email"
+              placeholder="you@example.com"
+              required
+            />
           </div>
           <div class="form-group">
-            <label for="seats">Seats</label>
-            <input type="number" id="seats" min="1" required>
+            <label for="password">Password</label>
+            <input
+              type="password"
+              id="password"
+              placeholder="Enter password"
+              required
+            />
           </div>
-          <div class="form-group">
-            <label for="paymentMode">Payment Mode</label>
-            <select id="paymentMode" required>
-              <option value="">-- select --</option>
-              <option value="upi">UPI</option>
-              <option value="card">Card</option>
-            </select>
-          </div>
-          <button type="submit" class="btn primary">Book Now</button>
+          <button type="submit" class="btn primary">Login</button>
         </form>
-        <p id="bookError" class="error"></p>
-      </section>
+        <p id="loginError" class="error"></p>
+      </div>
+    </div>
 
-      <section>
-        <h2>Bookings Report</h2>
-        <button id="fetchReport" class="btn outline">Load Report</button>
-        <ul id="bookingsReport" class="list"></ul>
-      </section>
-    </main>
-  </div>
-</div>
+    <!-- DASHBOARD PAGE -->
+    <div id="dashboardPage" class="page hidden">
+      <div class="dashboard">
+        <header class="dashboard-header">
+          <div class="sample2">🎟️ BookMyShow</div>
+          <div class="sample">
+            <button id="logoutBtn" class="btn danger">Logout</button>
+          </div>
+        </header>
 
-<script src="script.js"></script>
-</body>
+        <main>
+          <section>
+            <h2>All Movies</h2>
+            <ul id="moviesList" class="list"></ul>
+          </section>
+
+          <section>
+            <h2>My Bookings</h2>
+            <ul id="myBookings" class="list"></ul>
+          </section>
+
+          <section>
+            <h2>Available Shows</h2>
+            <ul id="schedulesList" class="list"></ul>
+          </section>
+
+          <section>
+            <h2>Book a Ticket</h2>
+            <form id="bookForm" class="form">
+              <div class="form-group">
+                <label for="scheduleId">Schedule ID</label>
+                <input
+                  type="number"
+                  id="scheduleId"
+                  placeholder="e.g. 1001"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label for="seats">Seats</label>
+                <input type="number" id="seats" min="1" required />
+              </div>
+              <div class="form-group">
+                <label for="paymentMode">Payment Mode</label>
+                <select id="paymentMode" required>
+                  <option value="">-- select --</option>
+                  <option value="upi">UPI</option>
+                  <option value="card">Card</option>
+                </select>
+              </div>
+              <button type="submit" class="btn primary">Book Now</button>
+            </form>
+            <p id="bookError" class="error"></p>
+          </section>
+
+          <section>
+            <h2>Bookings Report</h2>
+            <button id="fetchReport" class="btn outline">Load Report</button>
+            <ul id="bookingsReport" class="list"></ul>
+          </section>
+        </main>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
 </html>
-
-
-
-
-
-
-
-
