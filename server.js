@@ -5,11 +5,11 @@ const mongoose  = require('mongoose');
 const jwt       = require('jsonwebtoken');
 const bcrypt    = require('bcryptjs');
 const cors      = require('cors');
+require('dotenv').config();
 
 const app = express();
 const PORT = process.env.PORT || 3000;
-
-const SECRET = 'your_jwt_secret_key_123';
+const SECRET = process.env.JWT_SECRET;
 
 app.use(express.json());
 app.use(cors());
@@ -18,7 +18,7 @@ app.get("/", (req, res) => {
 });
 
 // ---------- CONNECT DB ----------
-mongoose.connect('mongodb+srv://prasadfakke2006_db_user:oaIreYdWde1tdDYc@projectcluster.i90hmfy.mongodb.net/')
+mongoose.connect(process.env.MONGO_URI)
     .then(() => console.log('MongoDB Connected'))
     .catch(err => console.log('MongoDB Error:', err));
 
