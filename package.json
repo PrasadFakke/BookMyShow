@@ -1,0 +1,29 @@
+{
+  "name": "dbms-project",
+  "version": "1.0.0",
+  "description": "A full-stack movie booking web application developed as part of a DBMS project. Users can securely log in, browse available movies and shows, book tickets, view their bookings, and access booking reports. The application uses a Node.js backend with MongoDB Atlas for data storage.",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PrasadFakke/DBMS-Project.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PrasadFakke/DBMS-Project/issues"
+  },
+  "homepage": "https://github.com/PrasadFakke/DBMS-Project#readme",
+  "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "cors": "^2.8.6",
+    "dotenv": "^18.0.3",
+    "express": "^5.2.1",
+    "jsonwebtoken": "^9.0.3",
+    "mongoose": "^9.10.1"
+  }
+}
