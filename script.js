@@ -1,4 +1,4 @@
-const API_URL = 'http://localhost:3000/api';
+const API_URL = "https://dbms-exp-10.onrender.com/api";
 
 // ---------- ELEMENTS ----------
 const loginPage   = document.getElementById('loginPage');
